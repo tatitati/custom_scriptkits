@@ -1,5 +1,8 @@
 // Name: Backward
 
+// input:   BCNMAD
+// output:  MADBCN
+
 import "@johnlindquist/kit"
 
 let text = await getSelectedText()
