@@ -5,7 +5,9 @@ import "@johnlindquist/kit"
 
 
 let text = await getSelectedText()
-let result = text.replace(/(^"|"$)/g, '')
-result = result.replace(/(^'|'$)/g, '')
 
-await setSelectedText("\'"+result+"\'")
+
+let lines = text.split('\n').map(line => "'"+line+"'")
+let result = lines.join('\n')
+
+await setSelectedText(result)

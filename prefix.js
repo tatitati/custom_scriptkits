@@ -6,7 +6,8 @@ import "@johnlindquist/kit"
 let text = await getSelectedText()
 let prefix = await arg("Prefix:")
 
-let result = text.replace(/^/gm, prefix)
+let lines = text.split('\n').map(line => prefix+line)
+let result = lines.join('\n')
 
 
 await setSelectedText(result)

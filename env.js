@@ -5,15 +5,15 @@ import "@johnlindquist/kit"
 let text = await getSelectedText()
 let to_env = await arg("To env:")
 
-let result = text.replace("dev", to_env.toLowerCase());
-result = result.replace("sit", to_env.toLowerCase());
-result = result.replace("oat", to_env.toLowerCase());
-result = result.replace("prod", to_env.toLowerCase());
+let result = text.replace(/dev/g, to_env.toLowerCase());
+result = result.replace(/sit/g, to_env.toLowerCase());
+result = result.replace(/oat/g, to_env.toLowerCase());
+result = result.replace(/prod/g, to_env.toLowerCase());
 
-result = result.replace("DEV", to_env.toUpperCase());
-result = result.replace("SIT", to_env.toUpperCase());
-result = result.replace("OAT", to_env.toUpperCase());
-result = result.replace("PROD", to_env.toUpperCase());
+result = result.replace(/DEV/g, to_env.toUpperCase());
+result = result.replace(/SIT/g, to_env.toUpperCase());
+result = result.replace(/OAT/g, to_env.toUpperCase());
+result = result.replace(/PROD/g, to_env.toUpperCase());
 
 
 await setSelectedText(result)
