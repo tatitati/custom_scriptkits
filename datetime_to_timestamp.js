@@ -8,9 +8,5 @@ import "@johnlindquist/kit"
 let text_date = await getSelectedText();
 
 
-// Create a new JavaScript Date object based on the timestamp
-// multiplied by 1000 so that the argument is in milliseconds, not seconds
-let result = Date.parse(text_date);
-
-
-await setSelectedText(result.getTime())
+let customdate = Date.parse(text_date)
+await setSelectedText(customdate.toString())
