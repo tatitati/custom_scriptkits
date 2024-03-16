@@ -1,5 +1,8 @@
 // Name: Env
 
+// input:  FR-BI-SOMETHING-prod-sqs-PROD
+// output: FR-BI-SOMETHING-oat-sqs-OAT
+
 import "@johnlindquist/kit"
 
 let text = await getSelectedText()
