@@ -2,6 +2,9 @@
 
 import "@johnlindquist/kit"
 
+// input:  hola
+// output: somethinghola
+
 
 let text = await getSelectedText()
 let sufix = await arg("Sufix:")
