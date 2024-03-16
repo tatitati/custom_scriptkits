@@ -14,13 +14,13 @@ let unix_timestamp = await getSelectedText();
 var date = new Date(Number(unix_timestamp) * 1000);
 
 var year = date.getFullYear();
-var month = date.getMonth();
-var day = date.getDay();
-var hours = date.getHours();
+var month = "0" + date.getMonth();
+var day = "0" + date.getDay();
+var hours = "0" + date.getHours();
 var minutes = "0" + date.getMinutes();
 var seconds = "0" + date.getSeconds();
 
-var result = year + '-' + month + '-' + day + ' ' + hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+var result = year + '-' + month.slice(-2) + '-' + day.slice(-2) + ' ' + hours.slice(-2) + ':' + minutes.slice(-2) + ':' + seconds.slice(-2);
 
 
 await setSelectedText(result)

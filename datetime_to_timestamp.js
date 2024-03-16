@@ -1,16 +1,16 @@
 // Name: DateTime To Timestamp
 
-// input: 2019-02-04 20:34:12
+// intput:  2019-02-04 20:34:12
 // output:  1549312452
 
 import "@johnlindquist/kit"
 
-let text = await getSelectedText();
+let text_date = await getSelectedText();
 
-const chars = {'"': "'", "'": '"'};
-  
 
-// let result = text.replace('"', "'");
-let result = text.replace(/["']/g, m => chars[m]);
+// Create a new JavaScript Date object based on the timestamp
+// multiplied by 1000 so that the argument is in milliseconds, not seconds
+let result = Date.parse(text_date);
 
-await setSelectedText(result)
+
+await setSelectedText(result.getTime())
