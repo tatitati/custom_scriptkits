@@ -2,6 +2,9 @@
 
 import "@johnlindquist/kit"
 
+// input:  asdfadsfAasdfAasdf
+// output: asdfadsf_aasdf_aasdf
+
 function camelToUnderscore(key) {
     const string1= key.charAt(0).toLowerCase() + key.slice(1)
 
