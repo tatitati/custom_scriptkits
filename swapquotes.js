@@ -1,5 +1,12 @@
 // Name: Swap quotes
 
+// input:  'hola'
+// output: "hola"
+
+
+// input:  "hola"
+// output: 'hola'
+
 import "@johnlindquist/kit"
 
 let text = await getSelectedText();
