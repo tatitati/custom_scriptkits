@@ -5,7 +5,7 @@ import "@johnlindquist/kit"
 // input:  asdfadsfAasdfAasdf
 // output: asdfadsf_aasdf_aasdf
 
-function camelToUnderscore(key) {
+function camelToSnake(key) {
     const string1= key.charAt(0).toLowerCase() + key.slice(1)
 
     var result = string1.replace( /([A-Z])/g, " $1" );
@@ -16,4 +16,4 @@ function camelToUnderscore(key) {
 let text = await getSelectedText()
 
 
-await setSelectedText(camelToUnderscore(text))
+await setSelectedText(camelToSnake(text))
