@@ -9,7 +9,7 @@ import "@johnlindquist/kit"
 let text = await getSelectedText()
 let sufix = await arg("Sufix:")
 
-let lines = text.split('\n').map(line => line+sufix)
+let lines = text.split('\n').map(line => line.trim()+sufix)
 let result = lines.join('\n')
 
 
