@@ -8,7 +8,7 @@ import "@johnlindquist/kit"
 
 let unix_timestamp = await getSelectedText();
 
-var date = new Date(Number(unix_timestamp) * 1000);
+var date = new Date(Number(unix_timestamp));
 
 var year = date.getFullYear();
 var month = "0" + date.getMonth();
